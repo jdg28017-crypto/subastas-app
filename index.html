@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6f5c">
+<title>Subastas</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icono.svg">
+<link rel="apple-touch-icon" href="icono-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Subastas">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+  <h1>Subastas</h1>
+  <span id="generado"></span>
+</header>
+<nav id="tabs">
+  <button data-v="todas" class="on">Todas</button>
+  <button data-v="nuevas">Nuevas</button>
+  <button data-v="interesantes">Interesantes</button>
+  <button data-v="seguimiento">Seguimiento</button>
+</nav>
+<section id="filtros">
+  <select id="f-perfil"><option value="">Todas las zonas</option></select>
+  <select id="f-sem">
+    <option value="">Todo semáforo</option><option value="verde">🟢 Verde</option>
+    <option value="ambar">🟡 Ámbar+</option><option value="rojo">🔴 Todo</option>
+  </select>
+  <select id="f-orden">
+    <option value="score">Mejor score</option><option value="fin">Cierra antes</option>
+    <option value="valor">Más barata</option>
+  </select>
+</section>
+<main id="lista"></main>
+<aside id="hoja" hidden></aside>
+<script src="app.js"></script>
+</body>
+</html>
